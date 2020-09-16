@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import TopBar from './components/TopBar'
+import TopBar from '@/components/TopBar'
 
 export default {
   name: 'App',
@@ -16,7 +16,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="css">
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
 
 #app {
@@ -34,6 +34,7 @@ body {
 :root {
   --text: #272727;
   --border: #b7b7b7;
+  --nav-link: #007adf;
 }
 
 a {

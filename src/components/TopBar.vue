@@ -11,7 +11,7 @@
   </div>
 </template>
 
-<style scoped>
+<style lang="css" scoped>
   .top-bar {
     width: 100vw;
     background: #ffffff;
@@ -21,7 +21,7 @@
   }
   .inner {
     width: 100%;
-    max-width: 840px;
+    max-width: 1200px;
     display: flex;
     align-items: center;
     justify-content: space-between;
