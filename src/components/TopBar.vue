@@ -1,0 +1,43 @@
+<template>
+  <div class="top-bar">
+    <div class="inner">
+      <div class="logo"/>
+      <div class="links">
+        <router-link to="/">Drinks</router-link>
+        <router-link to="/">About</router-link>
+        <router-link to="/">Other links here?</router-link>
+      </div>
+    </div>
+  </div>
+</template>
+
+<style scoped>
+  .top-bar {
+    width: 100vw;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .inner {
+    width: 100%;
+    max-width: 840px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid 1px var(--border);
+    padding: 20px 50px;
+  }
+  .logo {
+    width: 65px;
+    height: 65px;
+    background-image: url('../assets/logo-single.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  div a {
+    padding: 0 15px;
+    font-size: 18px;
+  }
+</style>
