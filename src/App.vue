@@ -1,17 +1,20 @@
 <template>
   <div id="app">
     <TopBar/>
-    <router-view/>
+    <router-view class="router-top"/>
+    <Footer/>
   </div>
 </template>
 
 <script>
 import TopBar from '@/components/TopBar'
+import Footer from '@/components/Footer'
 
 export default {
   name: 'App',
   components: {
-    TopBar
+    TopBar,
+    Footer
   }
 }
 </script>
@@ -40,5 +43,9 @@ body {
 a {
   color: var(--text);
   text-decoration: none;
+}
+
+.router-top {
+  padding-top: 105px;
 }
 </style>

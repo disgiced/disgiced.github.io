@@ -18,6 +18,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: fixed;
+    box-shadow: 0px 1px 10px rgba(0,0,0,.15);
   }
   .inner {
     width: 100%;
@@ -25,7 +27,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: solid 1px var(--border);
     padding: 20px 50px;
   }
   .logo {
