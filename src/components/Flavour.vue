@@ -10,7 +10,7 @@
         <img draggable="false" class="bottle-part" :src="'/static/' + flavour + '.png'"/>
       </div>
     </section>
-    <section class="wider sustainable" :class="flavour + '-bg'">
+    <section class="sustainable normal wider" :class="flavour + '-bg'">
       <div class="inner left">
         <div class="titles">
           <div class="main-title normal">100% sustainable</div>
@@ -87,6 +87,11 @@ section.title {
   display: flex;
   align-items: center;
   height: 500px;
+}
+section.normal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 section.title h1 {
   font-size: 58px;
