@@ -118,7 +118,7 @@ section.flavours section:hover {
 }
 .strawberry {
   background-color: #ffb9c2;
-  background-image: url('/static/strawberries.png');
+  background-image: url('/static/strawberry.png');
 }
 .vanilla {
   background-color: #faedc9;
