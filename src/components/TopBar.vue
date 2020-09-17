@@ -1,11 +1,11 @@
 <template>
   <div class="top-bar">
     <div class="inner">
-      <div class="logo"/>
+      <router-link to="/"><div class="logo"/></router-link>
       <div class="links">
-        <router-link to="/">Drinks</router-link>
-        <router-link to="/">About</router-link>
-        <router-link to="/">Other links here?</router-link>
+        <router-link to="/drinks">Drinks</router-link>
+        <router-link to="/about">About</router-link>
+        <router-link to="/other">Other links here?</router-link>
       </div>
     </div>
   </div>
@@ -19,6 +19,8 @@
     align-items: center;
     justify-content: center;
     position: fixed;
+    top: 0;
+    z-index: 10;
     box-shadow: 0px 1px 10px rgba(0,0,0,.15);
   }
   .inner {
@@ -37,8 +39,14 @@
     background-repeat: no-repeat;
     background-position: center;
   }
+  .logo:hover {
+    transform: rotate(10deg) scale(1.1);
+  }
   div a {
     padding: 0 15px;
     font-size: 18px;
+  }
+  .router-link-active {
+    font-weight: bold;
   }
 </style>
