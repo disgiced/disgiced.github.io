@@ -6,34 +6,46 @@
     </section>
     <section class="ex-wide flavours">
       <section class="chocolate">
-        <div class="flavour-wrapper">
-          <div class="flavour-title">Iced Chocolate</div>
-        </div>
+        <router-link to="/drinks/chocolate">
+          <div class="flavour-wrapper">
+            <div class="flavour-title">Iced Chocolate</div>
+          </div>
+        </router-link>
       </section>
       <section class="coffee">
-        <div class="flavour-wrapper">
-          <div class="flavour-title">Iced Coffee</div>
-        </div>
+        <router-link to="/drinks/coffee">
+          <div class="flavour-wrapper">
+            <div class="flavour-title">Iced Coffee</div>
+          </div>
+        </router-link>
       </section>
       <section class="caramel">
-        <div class="flavour-wrapper">
-          <div class="flavour-title">Caramel</div>
-        </div>
+        <router-link to="/drinks/caramel">
+          <div class="flavour-wrapper">
+            <div class="flavour-title">Caramel</div>
+          </div>
+        </router-link>
       </section>
       <section class="strawberry">
-        <div class="flavour-wrapper">
-          <div class="flavour-title">Strawberry</div>
-        </div>
+        <router-link to="/drinks/strawberry">
+          <div class="flavour-wrapper">
+            <div class="flavour-title">Strawberry</div>
+          </div>
+        </router-link>
       </section>
       <section class="vanilla">
-        <div class="flavour-wrapper">
-          <div class="flavour-title">Vanilla</div>
-        </div>
+        <router-link to="/drinks/vanilla">
+          <div class="flavour-wrapper">
+            <div class="flavour-title">Vanilla</div>
+          </div>
+        </router-link>
       </section>
       <section class="mocha">
-        <div class="flavour-wrapper">
-          <div class="flavour-title">Mocha</div>
-        </div>
+        <router-link to="/drinks/mocha">
+          <div class="flavour-wrapper">
+            <div class="flavour-title">Mocha</div>
+          </div>
+        </router-link>
       </section>
     </section>
   </div>
@@ -73,6 +85,9 @@ section.flavours section {
   width: 50%;
   height: 500px;
   transition: 0.2s;
+  background-size: 75%;
+  background-repeat: no-repeat;
+  background-position: bottom right;
 }
 section.flavours section:hover {
   transform: scale(1.05);
@@ -81,29 +96,37 @@ section.flavours section:hover {
 }
 .flavour-wrapper {
   padding: 30px 40px;
+  height: calc(100% - 60px);
+  width: calc(100% - 80px);
 }
 .flavour-title {
   font-size: 56px;
   font-weight: 800;
 }
-.chocolate {
-  background: #63412b;
+.chocolate, .chocolate a {
+  background-color: #63412b;
+  background-image: url('/static/chocolate.png');
   color: #fff;
 }
 .coffee {
-  background: #eccfa6;
+  background-color: #eccfa6;
+  background-image: url('/static/coffee.png')
 }
 .caramel {
-  background: #eba958;
+  background-color: #eba958;
+  background-image: url('/static/caramel.png');
 }
 .strawberry {
-  background: #ffb9c2;
+  background-color: #ffb9c2;
+  background-image: url('/static/strawberries.png');
 }
 .vanilla {
-  background: #faedc9;
+  background-color: #faedc9;
+  background-image: url('/static/vanilla.png');
 }
-.mocha {
-  background: #8c5bb9;
+.mocha, .mocha a {
+  background-color: #8c5bb9;
+  background-image: url('/static/mocha.png');
   color: #fff;
 }
 </style>

@@ -5,7 +5,7 @@
       <div class="links">
         <router-link to="/drinks">Drinks</router-link>
         <router-link to="/about">About</router-link>
-        <router-link to="/other">Other links here?</router-link>
+        <router-link to="/other">Environment</router-link>
       </div>
     </div>
   </div>
