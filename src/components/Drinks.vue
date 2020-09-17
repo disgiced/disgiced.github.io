@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <section class="wide title">
+    <section class="section-top">
       <h1>Drinks</h1>
       <p>We offer a wide range of flavours and milks!</p>
     </section>
@@ -74,6 +74,22 @@ section.title p {
 }
 section.ex-wide {
   width: 100%;
+}
+.section-top {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+.section-top h1 {
+  font-size: 72px;
+  margin-bottom: 30px;
+}
+.section-top p {
+  max-width: 720px;
 }
 section.flavours {
   display: flex;
