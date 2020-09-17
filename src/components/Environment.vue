@@ -1,30 +1,31 @@
 <template>
   <div class="wrapper">
-    <section class="entice-section-top">
-      <div class="inner right drinks-range">
-        <div class="titles">
-          <div class="title-sub">Flavoured milk</div>
-          <div class="main-title">in disguise</div>
-        </div>
-        <router-link to="/drinks" class="nav-link">View our range of flavours</router-link>
-      </div>
+    <section class="section-top">
+      <h1>Our eco-friendly strategy</h1>
+      <p>Like you, we believe our precious planet's environment is important and is in need of everyone's care. Here at Disgiced, we especially prioritise lowering our carbon footprint as much as possible. Here's how we're doing it.</p>
     </section>
-    <section class="alt-milks-section">
-      <div class="inner left alt-milks">
+    <section class="sources-section">
+      <div class="inner right eco-friendly">
         <div class="titles">
-          <div class="main-title normal">Tastes like regular milk</div>
-          <div class="title-sub normal right-sub">Our drinks taste just like regular cow's milk, even though we use alternatives like almond milk.</div>
+          <div class="main-title normal">100% sustainable sources</div>
+          <div class="title-sub normal">Our ingredients comes from 100% sustainable sources, so you can be sure you're not contributing to your carbon footprint. We care about the environment, just like you! Thank you for looking after our planet.</div>
         </div>
-        <router-link to="/about" class="nav-link">Learn more</router-link>
       </div>
     </section>
     <section class="eco-friendly-section">
+      <div class="inner left eco-friendly">
+        <div class="titles">
+          <div class="main-title normal">100% recycled materials</div>
+          <div class="title-sub normal">Our packaging is made of 100% recycled materials. This includes the bottles, labeling, lid, you name it. It's all made of recycled materials, ready to be recycled again once finished.</div>
+        </div>
+      </div>
+    </section>
+    <section class="neutral-section">
       <div class="inner right eco-friendly">
         <div class="titles">
-          <div class="main-title normal">We're eco-friendly</div>
-          <div class="title-sub normal">We actually care about the environment, just like you! We strive to make our products as low-impact as possible by using 100% recycled materials for our packaging and sourcing ingredients from sustainable farms.</div>
+          <div class="main-title normal">100% carbon neutral</div>
+          <div class="title-sub normal">Disgiced is a carbon neutral business. Our office and manufacturing plants are 100% carbon neutral.</div>
         </div>
-        <router-link to="/environment" class="nav-link">Learn more</router-link>
       </div>
     </section>
   </div>
@@ -37,6 +38,22 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.section-top {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+.section-top h1 {
+  font-size: 72px;
+  margin-bottom: 30px;
+}
+.section-top p {
+  max-width: 720px;
+}
 section {
   display: flex;
   flex-direction: column;
@@ -76,7 +93,7 @@ section {
 .inner .title-sub.normal {
   font-size: 18px;
   margin-top: 25px;
-  max-width: 640px;
+  max-width: 730px;
 }
 .inner .main-title.normal {
   font-size: 56px;
@@ -94,20 +111,22 @@ section {
   content: '>';
   margin-left: 10px;
 }
-.drinks-range {
-  background-image: url('../assets/bottle.png');
-  height: 425px;
-}
-.alt-milks {
-  background-image: url('../assets/milks.png');
-  height: 300px;
-}
 .eco-friendly {
   height: 300px;
   color: #fff;
 }
 .eco-friendly-section {
-  background: linear-gradient(to right, rgba(0,0,0,.65), rgba(0,0,0,.1)), url('../assets/eco.jpg');
+  background: linear-gradient(to left, rgba(0,0,0,.65), rgba(0,0,0,.1)), url('../assets/recycling.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.sources-section {
+  background: linear-gradient(to right, rgba(0,0,0,.7), rgba(0,0,0,.3)), url('../assets/sugarcane.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.neutral-section {
+  background: linear-gradient(to right, rgba(0,0,0,.4), rgba(0,0,0,.1)), url('../assets/earth.jpg');
   background-size: cover;
   background-position: center;
 }

@@ -82,7 +82,7 @@ section.flavours {
   max-width: 1200px;
 }
 section.flavours section {
-  width: 50%;
+  width: 500px;
   height: 500px;
   transition: 0.2s;
   background-size: 75%;
@@ -100,7 +100,7 @@ section.flavours section:hover {
   width: calc(100% - 80px);
 }
 .flavour-title {
-  font-size: 56px;
+  font-size: 48px;
   font-weight: 800;
 }
 .chocolate, .chocolate a {
