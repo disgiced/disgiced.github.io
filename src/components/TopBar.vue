@@ -1,5 +1,5 @@
 <template>
-  <div class="top-bar">
+  <div class="top-bar" :class="topClass">
     <div class="inner">
       <router-link to="/"><div class="logo"/></router-link>
       <div class="links">
@@ -11,6 +11,30 @@
   </div>
 </template>
 
+<script>
+export default {
+  computed: {
+    topClass () {
+      return this.topBar
+    }
+  },
+  data () {
+    return {
+      topBar: 'top'
+    }
+  },
+  mounted () {
+    window.addEventListener('scroll', evt => {
+      if (evt.target.scrollingElement.scrollTop <= 30) {
+        this.topBar = 'top'
+      } else {
+        this.topBar = 'scrolling'
+      }
+    })
+  }
+}
+</script>
+
 <style lang="css" scoped>
   .top-bar {
     width: 100vw;
@@ -21,7 +45,13 @@
     position: fixed;
     top: 0;
     z-index: 10;
+    height: 105px;
+    transition: 0.25s;
+    transition-property: height;
+  }
+  .top-bar.scrolling {
     box-shadow: 0px 1px 10px rgba(0,0,0,.15);
+    height: 80px;
   }
   .inner {
     width: 100%;
@@ -42,7 +72,7 @@
   .logo:hover {
     transform: rotate(10deg) scale(1.1);
   }
-  div a {
+  div.links a {
     padding: 0 15px;
     font-size: 18px;
   }

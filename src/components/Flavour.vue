@@ -4,14 +4,24 @@
       <div class="description">
         <h1>{{ flavours[flavour].name }}</h1>
         <p>{{ flavours[flavour].desc }}</p>
+        <h1 class="price">$2.99<span class="asterisk">*</span> - 500mL</h1>
+        <div class="hint">*Recommended retail price. Same price for all milk types.</div>
       </div>
       <div class="bottle-img">
         <img draggable="false" class="bottle" :src="'/static/' + flavour + '-bottle.png'"/>
         <img draggable="false" class="bottle-part" :src="'/static/' + flavour + '.png'"/>
       </div>
     </section>
+    <section class="milk normal wider">
+      <div class="inner left milks">
+        <div class="titles">
+          <div class="main-title normal">Non-dairy milk? Yes.</div>
+          <div class="title-sub normal">Our drinks come in a few types of alternative milks: Almond milk, Soy milk & Coconut milk. No matter what you choose, you'll receive a tasty drink!</div>
+        </div>
+      </div>
+    </section>
     <section class="sustainable normal wider" :class="flavour + '-bg'">
-      <div class="inner left">
+      <div class="inner right">
         <div class="titles">
           <div class="main-title normal">100% sustainable</div>
           <div class="title-sub normal">Our {{ flavours[flavour].ingredient }} comes from 100% sustainable sources, so you can be sure you're not contributing to your carbon footprint. We care about the environment, just like you! Thank you for looking after our planet.</div>
@@ -148,40 +158,57 @@ section.title p {
 .wider {
   width: 100%;
 }
+.milk {
+  background-color: #fadfc0;
+}
+.milks {
+  background-image: url('../assets/milks.png');
+}
 .chocolate-bg {
-  background-image: linear-gradient(to left, rgba(0,0,0,.85), rgba(0,0,0,.3)), url('../assets/cocoa.jpg');
+  background-image: linear-gradient(to right, rgba(0,0,0,.85), rgba(0,0,0,.3)), url('../assets/cocoa.jpg');
   background-size: cover;
   background-position: center;
   color: #fff;
 }
 .coffee-bg {
-  background-image: linear-gradient(to left, rgba(0,0,0,.85), rgba(0,0,0,.3)), url('../assets/coffeebeans.jpg');
+  background-image: linear-gradient(to right, rgba(0,0,0,.85), rgba(0,0,0,.3)), url('../assets/coffeebeans.jpg');
   background-size: cover;
   background-position: center;
   color: #fff;
 }
 .mocha-bg {
-  background-image: linear-gradient(to left, rgba(0,0,0,.85), rgba(0,0,0,.3)), url('../assets/coffeebeans.jpg');
+  background-image: linear-gradient(to right, rgba(0,0,0,.85), rgba(0,0,0,.3)), url('../assets/coffeebeans.jpg');
   background-size: cover;
   background-position: center;
   color: #fff;
 }
 .caramel-bg {
-  background-image: linear-gradient(to left, rgba(0,0,0,.85), rgba(0,0,0,.3)), url('../assets/sugarcane.jpg');
+  background-image: linear-gradient(to right, rgba(0,0,0,.85), rgba(0,0,0,.3)), url('../assets/sugarcane.jpg');
   background-size: cover;
   background-position: center;
   color: #fff;
 }
 .strawberry-bg {
-  background-image: linear-gradient(to left, rgba(0,0,0,.85), rgba(0,0,0,.3)), url('../assets/strawberries.jpg');
+  background-image: linear-gradient(to right, rgba(0,0,0,.85), rgba(0,0,0,.3)), url('../assets/strawberries.jpg');
   background-size: cover;
   background-position: center;
   color: #fff;
 }
 .vanilla-bg {
-  background-image: linear-gradient(to left, rgba(0,0,0,.85), rgba(0,0,0,.3)), url('../assets/vanilla.jpg');
+  background-image: linear-gradient(to right, rgba(0,0,0,.85), rgba(0,0,0,.3)), url('../assets/vanilla.jpg');
   background-size: cover;
   background-position: center;
   color: #fff;
+}
+.asterisk {
+  font-size: 22px;
+  bottom: 15px;
+  position: relative;
+}
+.price {
+  font-size: 42px !important;
+}
+.hint {
+  font-size: 13px;
 }
 </style>

@@ -6,14 +6,14 @@
           <div class="title-sub">Flavoured milk</div>
           <div class="main-title">in disguise</div>
         </div>
-        <router-link to="/" class="nav-link">View our range of flavours</router-link>
+        <router-link to="/drinks" class="nav-link">View our range of flavours</router-link>
       </div>
     </section>
     <section class="alt-milks-section">
       <div class="inner left alt-milks">
         <div class="titles">
           <div class="main-title normal">Tastes like regular milk</div>
-          <div class="title-sub normal">Our drinks taste just like regular cow's milk, even though we use alternatives like almond milk.</div>
+          <div class="title-sub normal right-sub">Our drinks taste just like regular cow's milk, even though we use alternatives like almond milk.</div>
         </div>
         <router-link to="/" class="nav-link">Learn more</router-link>
       </div>
@@ -22,7 +22,7 @@
       <div class="inner right eco-friendly">
         <div class="titles">
           <div class="main-title normal">We're eco-friendly</div>
-          <div class="title-sub normal">We actually care about the environment, just like you! We strive to make our products as low-impact as possible by using 100% recycled materials for our packaging.</div>
+          <div class="title-sub normal">We actually care about the environment, just like you! We strive to make our products as low-impact as possible by using 100% recycled materials for our packaging and sourcing ingredients from sustainable farms.</div>
         </div>
         <router-link to="/" class="nav-link">Learn more</router-link>
       </div>
@@ -41,6 +41,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0px 50px;
 }
 .entice-section-top {
   background-color: #ffedd4;
@@ -98,7 +99,7 @@ section {
   height: 425px;
 }
 .alt-milks {
-  background-image: url('../assets/almond.png');
+  background-image: url('../assets/milks.png');
   height: 300px;
 }
 .eco-friendly {
@@ -112,5 +113,61 @@ section {
 }
 .eco-friendly a {
   color: #84ec7a;
+}
+</style>
+
+<style scoped>
+@media screen and (max-width: 1150px) {
+  .entice-section-top .inner .title-sub {
+    font-size: 36px;
+  }
+  .entice-section-top .inner .main-title {
+    font-size: 74px;
+  }
+  .inner .title-sub.normal.right-sub {
+    font-size: 18px;
+  }
+  .inner .main-title.normal {
+    font-size: 42px;
+    font-weight: 900;
+  }
+  .inner {
+    background-size: 50%;
+  }
+
+}
+@media screen and (max-width: 850px) {
+  .alt-milks {
+    height: 400px;
+  }
+  .drinks-range {
+    height: 550px;
+  }
+  .left, .right {
+    text-align: center;
+  }
+  .inner {
+    justify-content: flex-start;
+    align-items: center;
+    background-position: bottom;
+  }
+}
+@media screen and (max-width: 500px) {
+  .entice-section-top .inner .title-sub {
+    font-size: 28px;
+  }
+  .entice-section-top .inner .main-title {
+    font-size: 62px;
+  }
+  .inner .title-sub.normal.right-sub {
+    font-size: 16px;
+  }
+  .inner .main-title.normal {
+    font-size: 38px;
+    font-weight: 900;
+  }
+  .inner {
+    background-size: 85%;
+  }
 }
 </style>
